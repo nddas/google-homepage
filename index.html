@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+
+<style>
+    .grid{
+        position: relative;
+        display: grid;
+        grid-template-columns: minmax(963px, auto); /*Was the approximate size that best emulated Google*/
+        text-align: center;
+    }
+    #google {
+        margin: 143px auto 0px auto;
+    }
+    
+    #searchbar {
+        position: initial;
+        height: 42px;
+        width: 478px;
+        text-align: center;
+        text-indent: 0px;
+        border-radius: 35px;
+        border-width: 1px;
+        border-color: #e7e8eb;
+        border-style: solid;
+        background: url(/Images/googlemic_color_24dp.png) right no-repeat; /*This is used for the mic, not best practice as you'd want to be able click it, 
+        but I wanted to demonstrate another way to show the icon*/
+        background-size: 24px 24px;
+        background-position-x: 442px;
+    }
+    .gsbutton {
+        width: 143px;
+        height: 36px;
+        background-color: #f3f3f3;
+        border-style: solid;
+        border-color: #f3f3f3;
+        margin: 0px 0px 0px 8px;
+        border-radius: 4px;
+        font-size: 14px;
+        color: #5F6368;
+        }
+    a.topnav {
+        display: inline-block;
+        text-decoration: none;
+        font-family: Arial;
+        font-size: 13px;
+        margin: 11px 8px 5px 5px;
+        color:rgba(0,0,0,0.8);
+
+    }
+    #btopnav {
+        background-color: #3b7ee2;
+        border: #3b7ee2;
+        margin: 0px 10px auto auto;
+        border-style: solid;
+        color: white;
+        font-weight: bold;
+        height: 30px;
+        width: 69px;
+        border-radius: 2px;
+        }
+    #mglass {
+        top: -32px;
+        left: 15px;
+        opacity: 40%;
+
+    }
+    #resize {
+        position: absolute;
+        width: 48px;
+        height: 48px;
+    }
+    #resize img {
+        width: 19px;
+        height: auto;
+    }
+    #container {
+        margin: 27px auto 30px auto;
+        width: max-content;
+        height: max-content;
+    }
+    #resizetwo {
+        position: relative;
+        margin: 0px 10px 0px 10px;
+        top: 8px;
+        right: 3px;
+        display: inline-block;
+        width: 25px;
+        height: 25px;
+        opacity: 55%;
+    }
+    #resizetwo img {
+        width: 24px;
+        height: auto;
+    }
+</style>
+
+<head>
+    <title>Google Homepage</title>
+</head>
+
+<body>
+<div class="grid"> <!--Used to get the browser resize effect-->
+    <nav style="margin: 4px 12px 4px 12px">
+    <div style="width:max-content; display: inline; float: left;">
+        <a href="#" value="About" class="topnav">About</a>
+        <a href="#" value="About" class="topnav" style="margin:11px 8px 5px 7px">Store</a>
+    </div>
+        <div style="float:right;">
+        <a href="#" value="About" class="topnav">Gmail</a>
+        <a href="#" value="About" class="topnav">Images</a>
+        <div id="resizetwo">
+        <img src="/Images/outline_apps_black_24dp.png">
+        </div>
+        <input type="submit" value="Sign in" id="btopnav">
+    </div>
+</nav>
+
+        <img src="/Images/googlelogo.png" id="google" alt="The Google Logo">
+        <div name="searchbar" id="container">
+            <input type="text" id="searchbar">
+            <div id="resize">
+            <img id="mglass" class="grid" src="/Images/outline_search_black_24dp.png">
+</div>
+        </div>
+    <div name="sbbuttons" style="text-align:center; position: relative; right: 2px;">
+        <input value="Google Search" type="submit" class="gsbutton" style="width: 127px;">
+        <input value="I'm Feeling Lucky" type="submit" class="gsbutton">
+    </div>
+</div> 
+<footer>
+</footer>
+</body>
