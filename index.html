@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 
 <style>
-    .grid{
+    .box{
         position: relative;
-        display: grid;
-        grid-template-columns: minmax(963px, auto); /*Was the approximate size that best emulated Google*/
-        text-align: center;
+        display: flex;
+        flex-direction: column;
     }
     #google {
         margin: 143px auto 0px auto;
@@ -91,6 +90,24 @@
         width: 24px;
         height: auto;
     }
+    #footer {
+        position: fixed;
+        line-height: 100px;
+        height: 100px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: blue;
+        }
+    .bottomnav {
+        text-decoration: none;
+        font-family: Arial;
+        font-size: 14px;
+        margin: 0px 0px 0px 23px;
+        color:rgba(0,0,0,0.8);
+        display: inline-block;
+        
+    }
 </style>
 
 <head>
@@ -98,7 +115,7 @@
 </head>
 
 <body>
-<div class="grid"> <!--Used to get the browser resize effect-->
+<div class="box"> <!--Used to get the browser resize effect-->
     <nav style="margin: 4px 12px 4px 12px">
     <div style="width:max-content; display: inline; float: left;">
         <a href="#" value="About" class="topnav">About</a>
@@ -118,14 +135,27 @@
         <div name="searchbar" id="container">
             <input type="text" id="searchbar">
             <div id="resize">
-            <img id="mglass" class="grid" src="/Images/outline_search_black_24dp.png">
+            <img id="mglass" class="box" src="/Images/outline_search_black_24dp.png">
 </div>
         </div>
     <div name="sbbuttons" style="text-align:center; position: relative; right: 2px;">
         <input value="Google Search" type="submit" class="gsbutton" style="width: 127px;">
         <input value="I'm Feeling Lucky" type="submit" class="gsbutton">
     </div>
+
+
 </div> 
-<footer>
-</footer>
+    <div id="footer">
+        <div style="float:left;">
+        <a href="#" class="bottomnav" style="margin: 0px;">Advertising</a>
+        <a href="#" class="bottomnav">Business</a>
+        <a href="#" class="bottomnav">How Search works</a>
+    </div>
+    <div style="float: right; width: max-content; position: relative; right%;">
+        <a href="#" class="bottomnav">Privacy</a>
+        <a href="#" class="bottomnav">Terms</a>
+        <a href="#" class="bottomnav">Settings</a>
+    </div>
+    </div>
+</div>
 </body>
